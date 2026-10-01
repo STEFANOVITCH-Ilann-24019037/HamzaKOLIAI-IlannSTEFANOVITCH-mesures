@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game Hub - Votre référence pour les jeux vidéo classiques. Découvrez notre collection de jeux légendaires, leurs histoires et partagez vos avis.">
+    <!-- Styles -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/css/global.css" as="style">
+    <link rel="preload" href="../assets/css/game-details.css" as="style">
+    <link rel="stylesheet" href="../assets/css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/css/global.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/css/game-details.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="icon" href="../assets/img/icon.ico">
+    <title>Street Fighter II</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html"><h1>Game Hub</h1></a>
+            <nav class="navbar" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="mailto:sitebut@alwaysdata.net" aria-label="Nous contacter par email"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
+                    <li><a href="./formulaire.html" aria-label="Accéder au formulaire"><i class="fas fa-address-card" aria-hidden="true"></i> Formulaire</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="menu-toggle" aria-label="Menu de navigation">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <button id="toggle-theme" aria-label="Changer le thème">Thème</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="details-jeu">
+                <div class="entete-jeu">
+                    <img src="../assets/img/street-fighter.webp" 
+                         alt="Street Fighter II" 
+                         class="banniere-jeu" 
+                         width="1200" 
+                         height="675" 
+                         fetchpriority="high"
+                         decoding="async">
+                    <div class="info-jeu">
+                        <h2>Street Fighter II</h2>
+                        <div class="meta-jeu">
+                            <span><i class="fas fa-calendar"></i> 1991</span>
+                            <span><i class="fas fa-gamepad"></i> Capcom</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="description-jeu">
+                    <h2>Description</h2>
+                    <p>Street Fighter II est le jeu de combat qui a révolutionné le genre. Avec son casting de personnages charismatiques, ses combos complexes et son gameplay précis, il est devenu la référence des jeux de combat. Les joueurs peuvent choisir parmi une variété de combattants, chacun avec son propre style et ses techniques spéciales.</p>
+                </section>
+
+                <section class="caracteristiques-jeu">
+                    <h2>Caractéristiques</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Combats intenses</li>
+                        <li><i class="fas fa-check"></i> Personnages uniques</li>
+                        <li><i class="fas fa-check"></i> Coups spéciaux</li>
+                        <li><i class="fas fa-check"></i> Mode versus</li>
+                        <li><i class="fas fa-check"></i> Musique iconique</li>
+                    </ul>
+                </section>
+
+                <section class="video-jeu">
+                    <h2>Bande-annonce</h2>
+                    <div class="video-container">
+                        <div class="video-facade" data-video-id="xI284D4y1q4">
+                            <img src="https://img.youtube.com/vi/xI284D4y1q4/maxresdefault.jpg" 
+                                 alt="Miniature Street Fighter II Trailer"
+                                 loading="lazy"
+                                 width="1280"
+                                 height="720"
+                                 decoding="async">
+                            <button 
+                                class="play-button" 
+                                aria-label="Lire la bande-annonce de Street Fighter II"
+                                tabindex="0">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="liens-jeu">
+                    <h2>Liens utiles</h2>
+                    <div class="grille-liens">
+                        <a href="https://www.streetfighter.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="carte-lien">
+                            <i class="fas fa-globe fa-2x"></i>
+                            <span>Site officiel</span>
+                        </a>
+                        <a href="https://streetfighter.fandom.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="carte-lien">
+                            <i class="fas fa-book"></i>
+                            <span>Wiki</span>
+                        </a>
+                        <a href="https://www.youtube.com/user/streetfighter" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="carte-lien">
+                            <i class="fab fa-youtube"></i>
+                            <span>Chaîne YouTube</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="avis-jeu">
+                    <h2>Avis des joueurs</h2>
+                    <div class="conteneur-avis">
+                        <div class="statistiques-avis">
+                            <div class="note-globale">
+                                <span class="numero-note">4.8</span>
+                                <div class="etoiles">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="total-avis">Basé sur 16,700 avis</span>
+                            </div>
+                        </div>
+                        <div class="ajout-avis">
+                            <a href="../Pages/formulaire.html" class="bouton-avis">
+                                <i class="fas fa-pencil-alt"></i> Écrire un avis
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="mailto:contact@gamehub.com" class="fas fa-envelope"> Contactez-nous</a></li>
+            <li><a href="https://youtube.com/@game_hub240?si=CqTT7-TUIiFihJGH" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube Game Hub</a></li>
+            <li><a href="https://www.instagram.com/gamehub24" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i> Instagram Game Hub</a></li>
+            <li><a href="https://discord.gg/zNmbNJ62" target="_blank" 
+                            rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord Game Hub</a></li>
+        </ul>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" >
+            <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+        </a>
+        <p>&copy; 2024 Game Hub. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/menu.js" defer></script>
+    <script src="../assets/js/theme.js" defer></script>
+    <script src="../assets/js/back-to-top.js" defer></script>
+    <button id="back-to-top" aria-label="Retour en haut de la page" class="back-to-top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    
+    <!-- Video Loading Script -->
+    <script>
+        function loadVideo(videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('height', '400');
+            iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1`);
+            iframe.setAttribute('title', 'Street Fighter II Video');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('style', 'width: 100%; border: none;');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+
+            const videoContainer = document.querySelector(`[data-video-id="${videoId}"]`);
+            videoContainer.parentNode.replaceChild(iframe, videoContainer);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoContainers = document.querySelectorAll('.video-facade');
+            videoContainers.forEach(container => {
+                container.addEventListener('click', () => {
+                    const videoId = container.getAttribute('data-video-id');
+                    loadVideo(videoId);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
