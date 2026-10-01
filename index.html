@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+    <!-- HTML Meta Tags -->
+    <title>Game Hub</title>
+    <meta name="description" content="Game Hub - Votre référence pour les jeux vidéo classiques. Découvrez notre collection de jeux légendaires, leurs histoires et partagez vos avis.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="http://sitebut.alwaysdata.net/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Game Hub">
+    <meta property="og:description" content="Game Hub - Votre référence pour les jeux vidéo classiques. Découvrez notre collection de jeux légendaires, leurs histoires et partagez vos avis.">
+    <meta property="og:image" content="http://sitebut.alwaysdata.net/assets/img/mario.webp">
+    <meta property="og:image:width" content="713">
+    <meta property="og:image:height" content="476">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="sitebut.alwaysdata.net">
+    <meta property="twitter:url" content="http://sitebut.alwaysdata.net/index.html">
+    <meta name="twitter:title" content="Game Hub">
+    <meta name="twitter:description" content="Game Hub - Votre référence pour les jeux vidéo classiques. Découvrez notre collection de jeux légendaires, leurs histoires et partagez vos avis.">
+    <meta name="twitter:image" content="http://sitebut.alwaysdata.net/assets/img/mario.webp">
+
+    <!-- Meta Tags Generated via https://opengraph.dev -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game Hub - Votre référence pour les jeux vidéo classiques. Découvrez notre collection de jeux légendaires, leurs histoires et partagez vos avis.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Helali Amin, stefanovitch ilann, Koliai Hamza">
+    <link rel="canonical" href="https://gamehub.fr">
+    
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preload" href="./assets/css/global.css" as="style">
+    <link rel="preload" href="./assets/css/style.css" as="style">
+    
+    <!-- Référencement local -->
+    <script type="application/ld+json"> 
+        { "@context": "https://schema.org", "@type": "EducationalOrganization", "name": "Département Informatique - IUT d'Aix-en-Provence", 
+        "address": { "@type": "PostalAddress", "streetAddress": "Avenue Gaston Berger", "addressLocality": "Aix-en-Provence", "postalCode": "13625",
+         "addressCountry": "FR" }, "url": "https://iut.univ-amu.fr/", "telephone": "+33 4 42 93 90 00" } 
+    </script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="icon" href="./assets/img/icon.ico">
+    <title>Game Hub</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" aria-label="Accueil Game Hub"><h1>Game Hub</h1></a>
+            <nav class="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Menu principal">
+                <ul>
+                    <li><a href="./Pages/formulaire.html" aria-label="Accéder au formulaire" itemprop="url"><i class="fas fa-address-card" aria-hidden="true"></i> <span itemprop="name">Formulaire</span></a></li>
+                    <li><a href="mailto:sitebut@alwaysdata.net" aria-label="Nous contacter par email" itemprop="url"><i class="fas fa-envelope" aria-hidden="true"></i> <span itemprop="name">Contact</span></a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="menu-toggle" aria-label="Menu de navigation">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <button id="toggle-theme" aria-label="Changer le thème">Thème</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="search-filters">
+                <h2>Filtres de recherche</h2>
+                <div class="filter-group">
+                    <div class="search-bar">
+                        <label for="searchInput" class="visually-hidden">Rechercher un jeu</label>
+                        <input type="text" id="searchInput" placeholder="Rechercher un jeu par titre, genre, plateforme...">
+                        <button type="button" aria-label="Lancer la recherche">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="sort">
+                        <label for="sortSelect" class="visually-hidden">Trier les jeux</label>
+                        <select id="sortSelect" aria-label="Options de tri">
+                            <option value="popularity">Trier par popularité</option>
+                            <option value="date">Trier par date de sortie</option>
+                            <option value="alpha">Trier par ordre alphabétique</option>
+                            <option value="rating">Trier par note</option>
+                            <option value="price">Trier par prix</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section id="games" class="Nos_Jeux" aria-label="Liste des jeux">
+                <h2>Les jeux disponibles</h2>
+                <div class="games-grid" role="list">
+                    <!-- Les jeux seront injectés ici par JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="mailto:contact@gamehub.com" class="fas fa-envelope"> Contactez-nous</a></li>
+            <li><a href="https://youtube.com/@game_hub240?si=CqTT7-TUIiFihJGH" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube Game Hub</a></li>
+            <li><a href="https://www.instagram.com/gamehub24" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i> Instagram Game Hub</a></li>
+            <li><a href="https://discord.gg/zNmbNJ62" target="_blank" 
+                            rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord Game Hub</a></li>
+        </ul>
+        <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+                <img alt="Licence Creative Commons" 
+                     width="88" 
+                     height="31" 
+                     src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+            </a>
+        </p>
+        <p>&copy; 2024 Game Hub. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Template pour la carte de jeu -->
+    <template id="game-card-template">
+        <div class="game-card" role="listitem">
+            <div class="game-image">
+                <img src="" alt="" 
+                     loading="lazy"
+                     decoding="async"
+                     fetchpriority="low"
+                     class="game-thumbnail">
+                <div class="game-overlay">
+                    <div class="game-rating" aria-label="Note du jeu">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <span class="rating-value"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="game-info">
+                <h2></h2>
+                <div class="game-meta">
+                    <span class="game-genre" aria-label="Genre"></span>
+                    <span class="game-year" aria-label="Année de sortie"></span>
+                    <span class="game-platform" aria-label="Plateformes"></span>
+                </div>
+                <div class="game-price" aria-label="Prix"></div>
+                <div class="game-actions">
+                    <button class="details-btn" aria-label="Voir les détails du jeu">Voir les détails</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="./assets/js/games-data.js" defer></script>
+    <script src="./assets/js/games-functions.js" defer></script>
+    <script src="./assets/js/game-search.js" defer></script>
+    <script src="./assets/js/theme.js" defer></script>
+    <script src="./assets/js/back-to-top.js" defer></script>
+    <script src="./assets/js/menu.js" defer></script>
+    <button id="back-to-top" aria-label="Retour en haut de la page" class="back-to-top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+</body>
+</html>
