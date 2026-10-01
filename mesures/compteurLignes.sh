@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Compte les lignes d'un projet, par extension + total.
+# Compte les lignes de chaque fichier d'un projet + total.
 # Usage : ./count_lines.sh [dossier] [--no-blank]
 #   dossier     : racine du projet (défaut : dossier courant)
 #   --no-blank  : ignore les lignes vides
@@ -32,21 +32,16 @@ list_files() {
   fi
 }
 
-declare -A lines files
 total_lines=0
 total_files=0
+results=""
 
 while IFS= read -r -d '' f; do
   [[ -f "$f" ]] || continue
-  # On saute les fichiers binaires
-  grep -Iq . "$f" 2>/dev/null || continue
-  # On saute les lockfiles, qui gonflent artificiellement le total
-  case "$(basename "$f")" in
+  grep -Iq . "$f" 2>/dev/null || continue   # saute les binaires
+  case "$(basename "$f")" in                # saute les lockfiles
     package-lock.json|yarn.lock|pnpm-lock.yaml|composer.lock|Cargo.lock|poetry.lock) continue ;;
   esac
-
-  name=$(basename "$f")
-  if [[ "$name" == *.* && "$name" != .* ]]; then ext="${name##*.}"; else ext="(sans ext)"; fi
 
   if $SKIP_BLANK; then
     n=$(grep -cv '^[[:space:]]*$' "$f" || true)
@@ -54,16 +49,13 @@ while IFS= read -r -d '' f; do
     n=$(wc -l < "$f")
   fi
 
-  lines[$ext]=$(( ${lines[$ext]:-0} + n ))
-  files[$ext]=$(( ${files[$ext]:-0} + 1 ))
+  results+="$(printf "%8d  %s" "$n" "${f#./}")"$'\n'
   total_lines=$(( total_lines + n ))
   total_files=$(( total_files + 1 ))
 done < <(list_files)
 
-printf "%-14s %8s %10s\n" "EXTENSION" "FICHIERS" "LIGNES"
-printf -- "-%.0s" {1..34}; echo
-for ext in "${!lines[@]}"; do
-  printf "%-14s %8d %10d\n" "$ext" "${files[$ext]}" "${lines[$ext]}"
-done | sort -k3 -nr
-printf -- "-%.0s" {1..34}; echo
-printf "%-14s %8d %10d\n" "TOTAL" "$total_files" "$total_lines"
+printf "%8s  %s\n" "LIGNES" "FICHIER"
+printf -- "-%.0s" {1..40}; echo
+printf "%s" "$results" | sort -nr
+printf -- "-%.0s" {1..40}; echo
+printf "%8d  TOTAL (%d fichiers)\n" "$total_lines" "$total_files"
